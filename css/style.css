@@ -48,6 +48,7 @@ h3 {
 
 p {
   margin-top: 0;
+  margin-left: 1rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -242,6 +243,13 @@ a {
   color: #fff;
 }
 
+.btn .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
@@ -255,7 +263,7 @@ a {
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
-  padding: 1.5rem 3.5rem;
+  padding: 2rem 3.5rem;
 }
 
 .input-group {
@@ -266,7 +274,7 @@ a {
 
 .input-group .input {
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
   border: 0;
 }
 
@@ -310,7 +318,16 @@ a {
   color: #fff;
 }
 
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
 /*plans*/
+
+.plan {
+  margin: 0 2rem 0 2rem;
+  transition: transform 0.3s ease-out;
+}
 .plan__name {
   color: #fff;
   margin: 0;
@@ -351,6 +368,17 @@ a {
   position: absolute;
   top: -6px;
   right: 5%;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+
+.plan--popular {
+  transform: scale(1.1);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px) {
@@ -437,8 +465,6 @@ a {
 /*Grids*/
 .grid {
   display: grid;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -584,6 +610,7 @@ a {
 
 .block__header {
   text-align: center;
+  margin: 12rem 2rem 0;
 }
 .container {
   max-width: 1140px;
@@ -673,5 +700,67 @@ a {
   .hero__content {
     text-align: left;
     align-self: center;
+  }
+}
+
+/*domain block*/
+.block-domain {
+  margin: 0 auto;
+}
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+.block--plan .grid {
+  gap: 8rem 4rem;
+}
+
+.block--plan .card {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/*features*/
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem;
+}
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
   }
 }
